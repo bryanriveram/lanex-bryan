@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Cancel"; ObjectID = "4v3-FS-3q3"; */
+"4v3-FS-3q3.text" = "Cancel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Dyr-fQ-1lr"; */
+"Dyr-fQ-1lr.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Add New Skill"; ObjectID = "Fbn-vk-ftJ"; */
+"Fbn-vk-ftJ.normalTitle" = "Add New Skill";
+
+/* Class = "UINavigationItem"; title = "Update Skill"; ObjectID = "GfP-We-muh"; */
+"GfP-We-muh.title" = "Update Skill";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "PGU-9i-781"; */
+"PGU-9i-781.title" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Bryan Rivera"; ObjectID = "SAB-1s-2yD"; */
+"SAB-1s-2yD.normalTitle" = "Bryan Rivera";
+
+/* Class = "UIButton"; normalTitle = "Experience"; ObjectID = "TNl-O9-WMl"; */
+"TNl-O9-WMl.normalTitle" = "Experience";
+
+/* Class = "UINavigationItem"; title = "Add New Skill"; ObjectID = "lmx-7Y-ULc"; */
+"lmx-7Y-ULc.title" = "Add New Skill";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "q2M-sE-FoS"; */
+"q2M-sE-FoS.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Skills"; ObjectID = "q3a-90-3ej"; */
+"q3a-90-3ej.text" = "Skills";
+
+/* Class = "UIButton"; normalTitle = "Position"; ObjectID = "vEb-wN-PJ9"; */
+"vEb-wN-PJ9.normalTitle" = "Position";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "wcb-Ff-Im7"; */
+"wcb-Ff-Im7.normalTitle" = "SAVE";
