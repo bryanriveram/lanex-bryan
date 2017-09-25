@@ -17,6 +17,8 @@
 		962DEFFB1F7399C400D622BC /* EditSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */; };
 		962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */; };
 		96C6B75F1F74EEDE00148331 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6B75E1F74EEDE00148331 /* TableViewCell.swift */; };
+		96FAF4BC1F78B27C00AF922D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */; };
+		96FAF4BE1F78BB6E00AF922D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSkillViewController.swift; sourceTree = "<group>"; };
 		96C6B75E1F74EEDE00148331 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		96C6B7621F7504D600148331 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				962DEFCA1F7283A700D622BC /* ViewController.swift */,
 				962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */,
 				962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */,
+				96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */,
+				96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */,
 				962DEFCC1F7283A700D622BC /* Main.storyboard */,
 				96C6B75E1F74EEDE00148331 /* TableViewCell.swift */,
 				962DEFCF1F7283A700D622BC /* Assets.xcassets */,
@@ -269,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FAF4BC1F78B27C00AF922D /* CollectionViewController.swift in Sources */,
 				96C6B75F1F74EEDE00148331 /* TableViewCell.swift in Sources */,
 				962DEFFB1F7399C400D622BC /* EditSkillViewController.swift in Sources */,
+				96FAF4BE1F78BB6E00AF922D /* CollectionViewCell.swift in Sources */,
 				962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */,
 				962DEFCB1F7283A700D622BC /* ViewController.swift in Sources */,
 				962DEFC91F7283A700D622BC /* AppDelegate.swift in Sources */,

@@ -35,12 +35,22 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedMe))
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
+        
+        let closeContainer = UITapGestureRecognizer(target: self, action: #selector(self.closeContainer))
+        
+        cancel.addGestureRecognizer(closeContainer)
+        cancel.isUserInteractionEnabled = true
+        
         picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func closeContainer(){
+       self.dismiss(animated: true, completion: nil)
     }
     
     func tappedMe() {
