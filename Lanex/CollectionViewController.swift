@@ -40,12 +40,12 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let newimage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            image.image = newimage
-        } else{
-            print("Something went wrong")
-        }
-        
+//        if let newimage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//            image.image = newimage
+//        } else{
+//            print("Something went wrong")
+//        }
+//      /  let url = info[UIImagepickurl]
         self.dismiss(animated: true, completion: nil)
     }
     

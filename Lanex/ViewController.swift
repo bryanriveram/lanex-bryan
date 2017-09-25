@@ -10,10 +10,9 @@ import UIKit
 
 struct skillData {
     let name: String!
+    let level: Int
     let img: UIImage!
 }
-
-
 
 class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -27,7 +26,7 @@ class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDe
     
     var skillIndex:Int = 0
     
-    var arraySkill : [skillData] = [skillData(name: "PHP", img: #imageLiteral(resourceName: "php")), skillData(name: "JS", img: #imageLiteral(resourceName: "php")), skillData(name: "MySql", img:#imageLiteral(resourceName: "php"))]
+    var arraySkill : [skillData] = [skillData(name: "PHP", level:8, img: #imageLiteral(resourceName: "php")), skillData(name: "JS", level:7, img: #imageLiteral(resourceName: "php")), skillData(name: "MySql", level:5, img:#imageLiteral(resourceName: "php"))]
     
     var picker:UIImagePickerController?=UIImagePickerController()
     
@@ -118,12 +117,14 @@ extension ViewController : UITableViewDataSource {
         
         let skillName:String = self.arraySkill[indexPath.row].name
         let image:UIImage = self.arraySkill[indexPath.row].img
+        let level:Int = self.arraySkill[indexPath.row].level
         
         print(skillName)
 //        print(image)
         
         cell.cellLabel?.text = skillName
         cell.cellImage?.image = image
+        cell.cellLevel.text = "\(level)"
 //        cell.imageView?.image = UIImage(named: image)
         
         return cell

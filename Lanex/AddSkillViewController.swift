@@ -28,7 +28,7 @@ class AddSkillViewController: UIViewController {
     }
 
     @IBAction func saveNewSkill(_ sender: Any) {
-        delegate?.onSkillInsert(skillDetails: skillData(name: skillName.text, img: #imageLiteral(resourceName: "php")))
+        delegate?.onSkillInsert(skillDetails: skillData(name: skillName.text, level: 1, img: #imageLiteral(resourceName: "php")))
         
         dismiss(animated: true, completion: nil)
     }
