@@ -116,7 +116,7 @@ extension ViewController: UITableViewDelegate {
         let canvas = vc.instantiateViewController(withIdentifier: "editskill") as! EditSkillViewController
         canvas.information = SkillManager.sharedInstance.arrayOfSkills[indexPath.row]
         canvas.delegate = self
-        canvas.row = indexPath.row
+        canvas.index = indexPath.row
         self.navigationController?.pushViewController(canvas, animated: true)
     }
 }
