@@ -14,7 +14,7 @@ struct skillData {
     let img: UIImage!
 }
 
-class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var nameBtn: UIButton!
     @IBOutlet weak var positionBtn: UIButton!
@@ -30,6 +30,7 @@ class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDe
     
     var picker:UIImagePickerController?=UIImagePickerController()
     
+    let vc = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,25 +46,10 @@ class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDe
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? EditSkillViewController {
-            destination.delegate = self
-            destination.information = self.arraySkill[skillIndex]
-        } else if let destination = segue.destination as? AddSkillViewController  {
-            destination.delegate = self
-        }
-    }
-    
     func tappedMe() {
         openGallery()
     }
-    
-    
-    func onSkillReady(skillDetails: skillData) {
-//        skillDetails.name = data.name
-        arraySkill[skillIndex] = skillDetails
-        self.tableView.reloadData()
-    }
+
     
     func openGallery() {
         picker!.allowsEditing = false
@@ -80,13 +66,16 @@ class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDe
         
         self.dismiss(animated: true, completion: nil)
     }
-
-    func onSkillInsert(skillDetails: skillData) {
-        arraySkill.append(skillDetails)
-        self.tableView.reloadData()
+    
+    @IBAction func openCollectionViewController(_ sender: Any) {
+        
+        let canvas = vc.instantiateViewController(withIdentifier: "SkillCanvas") as! SkillCanvas
+        canvas.skillArray = arraySkill
+        self.navigationController?.pushViewController(canvas, animated: true)
     }
     
-    @IBAction func nameSwapTouchDown(_ sender: UIButton) {
+    @IBAction func nameSwapTouchDown(_ sender: UIButton)
+    {
         
         if self.counter%2==0 {
            self.nameBtn.setTitle("Bryan", for: .normal)
@@ -95,6 +84,12 @@ class ViewController: UIViewController, SkillDelegate, UIImagePickerControllerDe
         }
         
         self.counter += 1
+    }
+    @IBAction func addNewSkill(_ sender: Any) {
+        let canvas = vc.instantiateViewController(withIdentifier: "AddSkillViewController") as! AddSkillViewController
+        canvas.delegate = self
+        self.navigationController?.pushViewController(canvas, animated: true)
+
     }
 }
 
@@ -135,6 +130,27 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.skillIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: nil)
+        let canvas = vc.instantiateViewController(withIdentifier: "editskill") as! EditSkillViewController
+        canvas.information = arraySkill[indexPath.row]
+        canvas.delegate = self
+        self.navigationController?.pushViewController(canvas, animated: true)
+    }
+}
+
+extension ViewController: SkillDelegate {
+    func onSkillReady(skillDetails: skillData){
+        
+    }
+    
+    func insertSkillController(_ controller: AddSkillViewController, didInsertWith details: skillData) {
+        self.navigationController?.popViewController(animated: true)
+        self.arraySkill.append(details)
+        self.tableView.reloadData()
+    }
+    
+    func editSkillController(_ controller: EditSkillViewController, didEditWith details:skillData){
+        self.navigationController?.popViewController(animated: true)
+        self.arraySkill[self.skillIndex] = details
+        self.tableView.reloadData()
     }
 }

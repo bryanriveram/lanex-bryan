@@ -11,7 +11,9 @@ import UIKit
 protocol SkillDelegate {
     func onSkillReady(skillDetails: skillData)
     
-    func onSkillInsert(skillDetails: skillData)
+    func insertSkillController(_ controller: AddSkillViewController, didInsertWith details: skillData)
+    
+    func editSkillController(_ controller: EditSkillViewController, didEditWith details:skillData)
 }
 
 class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -86,9 +88,11 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
 
 
     @IBAction func saveSkillName(_ sender: Any) {
-        delegate?.onSkillReady(skillDetails: skillData(name: skillName.text, level: self.row, img: image.image))
+//        delegate?.onSkillReady(skillDetails: skillData(name: skillName.text, level: self.row, img: image.image))
+        let updatedSkill = skillData(name: skillName.text, level: self.row, img: image.image)
+        delegate?.editSkillController(self, didEditWith: updatedSkill)
         
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func showPopup(_ sender: Any) {

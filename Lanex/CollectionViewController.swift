@@ -16,6 +16,7 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var close: UILabel!
     var picker:UIImagePickerController?=UIImagePickerController()
     override func viewDidLoad() {
+        print("gallery")
         super.viewDidLoad()
         let itemSize = UIScreen.main.bounds.width/3 - 3
         
@@ -26,12 +27,12 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
         layout.minimumLineSpacing = 3
         
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(closeContainer))
-        close.addGestureRecognizer(tap);
-        close.isUserInteractionEnabled = true
-        myCollectionView.collectionViewLayout = layout
-        
-        picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate 
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(closeContainer))
+//        close.addGestureRecognizer(tap);
+//        close.isUserInteractionEnabled = true
+//        myCollectionView.collectionViewLayout = layout
+//        
+//        picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate 
         // Do any additional setup after loading the view.
     }
     

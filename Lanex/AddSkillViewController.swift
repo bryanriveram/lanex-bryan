@@ -9,17 +9,24 @@
 import UIKit
 
 
-class AddSkillViewController: UIViewController {
+class AddSkillViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var skillName: UITextField!
     
     var name:String = ""
     var delegate:SkillDelegate?
+    var picker:UIImagePickerController?=UIImagePickerController()
     
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        image.image = #imageLiteral(resourceName: "php")
+        picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedMe))
+        image.addGestureRecognizer(tap)
+        image.isUserInteractionEnabled = true
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +35,30 @@ class AddSkillViewController: UIViewController {
     }
 
     @IBAction func saveNewSkill(_ sender: Any) {
-        delegate?.onSkillInsert(skillDetails: skillData(name: skillName.text, level: 1, img: #imageLiteral(resourceName: "php")))
-        
-        dismiss(animated: true, completion: nil)
+        let skillDetails = skillData(name: skillName.text, level: 1, img: image.image)
+        delegate?.insertSkillController(self, didInsertWith: skillDetails)
     }
+    
+    func tappedMe() {
+        openGallery()
+    }
+    
+    func openGallery() {
+        picker!.allowsEditing = false
+        picker!.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(picker!, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        print("went here")
+        if let newimage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            image.image = newimage
+        } else{
+            print("Something went wrong")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

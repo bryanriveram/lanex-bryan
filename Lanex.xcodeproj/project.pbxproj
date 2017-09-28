@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA0F699FD2580C910D17DF4 /* Pods_Lanex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1B27970A3A777738DDD940 /* Pods_Lanex.framework */; };
+		58AF307E167D2F75B3A44EF2 /* Pods_LanexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2767F75FB858C0492B0EDCB7 /* Pods_LanexTests.framework */; };
+		7033BD638C6801B5F92710CE /* Pods_LanexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB2B33EAED8116C81EA5A6F /* Pods_LanexUITests.framework */; };
 		962DEFC91F7283A700D622BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFC81F7283A700D622BC /* AppDelegate.swift */; };
 		962DEFCB1F7283A700D622BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFCA1F7283A700D622BC /* ViewController.swift */; };
 		962DEFCE1F7283A700D622BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962DEFCC1F7283A700D622BC /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 		962DEFE91F7283A700D622BC /* LanexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFE81F7283A700D622BC /* LanexUITests.swift */; };
 		962DEFFB1F7399C400D622BC /* EditSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */; };
 		962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */; };
+		96BD1B191F7B80DA0020B523 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B181F7B80DA0020B523 /* UIViewController+Extension.swift */; };
+		96BD1B1D1F7B93B40020B523 /* SkillCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */; };
+		96BD1B1F1F7B9EE80020B523 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B1E1F7B9EE80020B523 /* SkillView.swift */; };
 		96C6B75F1F74EEDE00148331 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C6B75E1F74EEDE00148331 /* TableViewCell.swift */; };
 		96FAF4BC1F78B27C00AF922D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */; };
 		96FAF4BE1F78BB6E00AF922D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */; };
@@ -39,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061F7E3E9FB509F041B58B9E /* Pods-LanexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanexUITests/Pods-LanexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		12EBD5BBF1DB9E045F4ABE41 /* Pods-Lanex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lanex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lanex/Pods-Lanex.release.xcconfig"; sourceTree = "<group>"; };
+		2767F75FB858C0492B0EDCB7 /* Pods_LanexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1B27970A3A777738DDD940 /* Pods_Lanex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lanex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB2B33EAED8116C81EA5A6F /* Pods_LanexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F47774DC90B36B37DBE40CC /* Pods-LanexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanexTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LanexTests/Pods-LanexTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6ED846744DA28B7E5ED5D86C /* Pods-Lanex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lanex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lanex/Pods-Lanex.debug.xcconfig"; sourceTree = "<group>"; };
+		6F43AD32CC678806CCA808B9 /* Pods-LanexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LanexUITests/Pods-LanexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		962DEFC51F7283A700D622BC /* Lanex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lanex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962DEFC81F7283A700D622BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		962DEFCA1F7283A700D622BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,10 +68,14 @@
 		962DEFEA1F7283A700D622BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSkillViewController.swift; sourceTree = "<group>"; };
 		962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSkillViewController.swift; sourceTree = "<group>"; };
+		96BD1B181F7B80DA0020B523 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCanvas.swift; sourceTree = "<group>"; };
+		96BD1B1E1F7B9EE80020B523 /* SkillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
 		96C6B75E1F74EEDE00148331 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		96C6B7621F7504D600148331 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A83F9CECDD180256BABB5033 /* Pods-LanexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanexTests/Pods-LanexTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA0F699FD2580C910D17DF4 /* Pods_Lanex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58AF307E167D2F75B3A44EF2 /* Pods_LanexTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7033BD638C6801B5F92710CE /* Pods_LanexUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +109,13 @@
 		962DEFBC1F7283A700D622BC = {
 			isa = PBXGroup;
 			children = (
+				96BD1B171F7B80780020B523 /* Helper */,
 				962DEFC71F7283A700D622BC /* Lanex */,
 				962DEFDC1F7283A700D622BC /* LanexTests */,
 				962DEFE71F7283A700D622BC /* LanexUITests */,
 				962DEFC61F7283A700D622BC /* Products */,
+				F30D791867BF6DCE39EF4B59 /* Pods */,
+				FB4AF6F642274D1F8E14B50F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +138,8 @@
 				962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */,
 				96FAF4BB1F78B27C00AF922D /* CollectionViewController.swift */,
 				96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */,
+				96BD1B1E1F7B9EE80020B523 /* SkillView.swift */,
+				96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */,
 				962DEFCC1F7283A700D622BC /* Main.storyboard */,
 				96C6B75E1F74EEDE00148331 /* TableViewCell.swift */,
 				962DEFCF1F7283A700D622BC /* Assets.xcassets */,
@@ -141,6 +167,37 @@
 			path = LanexUITests;
 			sourceTree = "<group>";
 		};
+		96BD1B171F7B80780020B523 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				96BD1B181F7B80DA0020B523 /* UIViewController+Extension.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		F30D791867BF6DCE39EF4B59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6ED846744DA28B7E5ED5D86C /* Pods-Lanex.debug.xcconfig */,
+				12EBD5BBF1DB9E045F4ABE41 /* Pods-Lanex.release.xcconfig */,
+				5F47774DC90B36B37DBE40CC /* Pods-LanexTests.debug.xcconfig */,
+				A83F9CECDD180256BABB5033 /* Pods-LanexTests.release.xcconfig */,
+				6F43AD32CC678806CCA808B9 /* Pods-LanexUITests.debug.xcconfig */,
+				061F7E3E9FB509F041B58B9E /* Pods-LanexUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB4AF6F642274D1F8E14B50F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A1B27970A3A777738DDD940 /* Pods_Lanex.framework */,
+				2767F75FB858C0492B0EDCB7 /* Pods_LanexTests.framework */,
+				5EB2B33EAED8116C81EA5A6F /* Pods_LanexUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 962DEFED1F7283A700D622BC /* Build configuration list for PBXNativeTarget "Lanex" */;
 			buildPhases = (
+				ED79AED717116B09A12C1F69 /* [CP] Check Pods Manifest.lock */,
 				962DEFC11F7283A700D622BC /* Sources */,
 				962DEFC21F7283A700D622BC /* Frameworks */,
 				962DEFC31F7283A700D622BC /* Resources */,
+				2E16292146C1A032C47D7989 /* [CP] Embed Pods Frameworks */,
+				AC3FA2A7BF1BCF6FC8D0BD09 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 962DEFF01F7283A700D622BC /* Build configuration list for PBXNativeTarget "LanexTests" */;
 			buildPhases = (
+				EEBCD392807838F21D40A1E4 /* [CP] Check Pods Manifest.lock */,
 				962DEFD51F7283A700D622BC /* Sources */,
 				962DEFD61F7283A700D622BC /* Frameworks */,
 				962DEFD71F7283A700D622BC /* Resources */,
+				28E4D985C561113CB3CC1B77 /* [CP] Embed Pods Frameworks */,
+				5EDD8D6178F8FD011CFC122A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 962DEFF31F7283A700D622BC /* Build configuration list for PBXNativeTarget "LanexUITests" */;
 			buildPhases = (
+				D8130FDF645C81E17A8A2E4F /* [CP] Check Pods Manifest.lock */,
 				962DEFE01F7283A700D622BC /* Sources */,
 				962DEFE11F7283A700D622BC /* Frameworks */,
 				962DEFE21F7283A700D622BC /* Resources */,
+				110B72742CC9BD4743C31998 /* [CP] Embed Pods Frameworks */,
+				7F4B8BC11A463F59930E2623 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,15 +336,168 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		110B72742CC9BD4743C31998 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LanexUITests/Pods-LanexUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28E4D985C561113CB3CC1B77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LanexTests/Pods-LanexTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E16292146C1A032C47D7989 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lanex/Pods-Lanex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lanex/Pods-Lanex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EDD8D6178F8FD011CFC122A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LanexTests/Pods-LanexTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F4B8BC11A463F59930E2623 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LanexUITests/Pods-LanexUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3FA2A7BF1BCF6FC8D0BD09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lanex/Pods-Lanex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8130FDF645C81E17A8A2E4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LanexUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED79AED717116B09A12C1F69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lanex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBCD392807838F21D40A1E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LanexTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		962DEFC11F7283A700D622BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BD1B191F7B80DA0020B523 /* UIViewController+Extension.swift in Sources */,
+				96BD1B1D1F7B93B40020B523 /* SkillCanvas.swift in Sources */,
 				96FAF4BC1F78B27C00AF922D /* CollectionViewController.swift in Sources */,
 				96C6B75F1F74EEDE00148331 /* TableViewCell.swift in Sources */,
 				962DEFFB1F7399C400D622BC /* EditSkillViewController.swift in Sources */,
 				96FAF4BE1F78BB6E00AF922D /* CollectionViewCell.swift in Sources */,
+				96BD1B1F1F7B9EE80020B523 /* SkillView.swift in Sources */,
 				962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */,
 				962DEFCB1F7283A700D622BC /* ViewController.swift in Sources */,
 				962DEFC91F7283A700D622BC /* AppDelegate.swift in Sources */,
@@ -434,6 +653,7 @@
 		};
 		962DEFEE1F7283A700D622BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED846744DA28B7E5ED5D86C /* Pods-Lanex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lanex/Info.plist;
@@ -446,6 +666,7 @@
 		};
 		962DEFEF1F7283A700D622BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12EBD5BBF1DB9E045F4ABE41 /* Pods-Lanex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lanex/Info.plist;
@@ -458,6 +679,7 @@
 		};
 		962DEFF11F7283A700D622BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F47774DC90B36B37DBE40CC /* Pods-LanexTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +694,7 @@
 		};
 		962DEFF21F7283A700D622BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83F9CECDD180256BABB5033 /* Pods-LanexTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +709,7 @@
 		};
 		962DEFF41F7283A700D622BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F43AD32CC678806CCA808B9 /* Pods-LanexUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LanexUITests/Info.plist;
@@ -499,6 +723,7 @@
 		};
 		962DEFF51F7283A700D622BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061F7E3E9FB509F041B58B9E /* Pods-LanexUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LanexUITests/Info.plist;
