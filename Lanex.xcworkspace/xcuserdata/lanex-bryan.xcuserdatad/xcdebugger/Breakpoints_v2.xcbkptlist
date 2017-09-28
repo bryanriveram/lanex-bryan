@@ -10,11 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lanex/SkillCanvas.swift"
-            timestampString = "528193213.546328"
+            timestampString = "528312721.786498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "10"
-            endingLineNumber = "10">
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -23,8 +25,8 @@
                   symbolName = "Lanex.SkillCanvas.__deallocating_deinit"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/SkillCanvas.swift"
-                  timestampString = "528261876.095522"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/SkillCanvas.swift"
+                  timestampString = "528291063.739395"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -35,41 +37,41 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.SkillCanvas.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.SkillCanvas"
+                  symbolName = "Lanex.SkillCanvas.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.SkillCanvas"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/SkillCanvas.swift"
-                  timestampString = "528261876.097589"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "58">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Lanex.SkillCanvas.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.SkillCanvas"
-                  moduleName = "Lanex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/SkillCanvas.swift"
-                  timestampString = "528261876.099429"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/SkillCanvas.swift"
+                  timestampString = "528291063.744181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.SkillCanvas.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.SkillCanvas&gt;"
+                  symbolName = "Lanex.SkillCanvas.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.SkillCanvas"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/SkillCanvas.swift"
-                  timestampString = "528261876.101194"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/SkillCanvas.swift"
+                  timestampString = "528291063.746643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lanex.SkillCanvas.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.SkillCanvas&gt;"
+                  moduleName = "Lanex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/SkillCanvas.swift"
+                  timestampString = "528291063.749085"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -80,16 +82,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.SkillCanvas.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.SkillCanvas&gt;"
+                  symbolName = "Lanex.SkillCanvas.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.SkillCanvas&gt;"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/SkillCanvas.swift"
-                  timestampString = "528261876.102836"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/SkillCanvas.swift"
+                  timestampString = "528291063.751627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "35">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -101,28 +103,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lanex/SkillView.swift"
-            timestampString = "528266942.971356"
+            timestampString = "528312721.787377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "init(width:height:name:level:image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lanex/SkillCanvas.swift"
-            timestampString = "528270976.444573"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "init(width:height:skill:position:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

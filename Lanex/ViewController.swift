@@ -8,11 +8,7 @@
 
 import UIKit
 
-struct skillData {
-    let name: String!
-    let level: Int
-    let img: UIImage!
-}
+
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -25,8 +21,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var counter:Int = 0
     
     var skillIndex:Int = 0
-    
-    var arraySkill : [skillData] = [skillData(name: "PHP", level:8, img: #imageLiteral(resourceName: "php")), skillData(name: "JS", level:7, img: #imageLiteral(resourceName: "php")), skillData(name: "MySql", level:5, img:#imageLiteral(resourceName: "php"))]
     
     var picker:UIImagePickerController?=UIImagePickerController()
     
@@ -44,6 +38,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     func tappedMe() {
@@ -68,9 +66,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func openCollectionViewController(_ sender: Any) {
-        
         let canvas = vc.instantiateViewController(withIdentifier: "SkillCanvas") as! SkillCanvas
-        canvas.skillArray = arraySkill
         self.navigationController?.pushViewController(canvas, animated: true)
     }
     
@@ -87,7 +83,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     @IBAction func addNewSkill(_ sender: Any) {
         let canvas = vc.instantiateViewController(withIdentifier: "AddSkillViewController") as! AddSkillViewController
-        canvas.delegate = self
         self.navigationController?.pushViewController(canvas, animated: true)
 
     }
@@ -100,28 +95,16 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arraySkill.count
+        return SkillManager.sharedInstance.arrayOfSkills.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:TableViewCell = tableView.dequeueReusableCell(withIdentifier: "SkillCell", for: indexPath) as! TableViewCell
         
-        // indexPath.section = GROUP
-        // indexPath.row = row in GROUP
-        
-        let skillName:String = self.arraySkill[indexPath.row].name
-        let image:UIImage = self.arraySkill[indexPath.row].img
-        let level:Int = self.arraySkill[indexPath.row].level
-        
-        print(skillName)
-//        print(image)
-        
-        cell.cellLabel?.text = skillName
-        cell.cellImage?.image = image
-        cell.cellLevel.text = "\(level)"
-//        cell.imageView?.image = UIImage(named: image)
-        
+        cell.cellLabel?.text = SkillManager.sharedInstance.arrayOfSkills[indexPath.row].name
+        cell.cellImage?.image = SkillManager.sharedInstance.arrayOfSkills[indexPath.row].img
+        cell.cellLevel.text = "\(SkillManager.sharedInstance.arrayOfSkills[indexPath.row].level)"
         return cell
     }
 }
@@ -131,8 +114,9 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.skillIndex = indexPath.row
         let canvas = vc.instantiateViewController(withIdentifier: "editskill") as! EditSkillViewController
-        canvas.information = arraySkill[indexPath.row]
+        canvas.information = SkillManager.sharedInstance.arrayOfSkills[indexPath.row]
         canvas.delegate = self
+        canvas.row = indexPath.row
         self.navigationController?.pushViewController(canvas, animated: true)
     }
 }
@@ -144,13 +128,13 @@ extension ViewController: SkillDelegate {
     
     func insertSkillController(_ controller: AddSkillViewController, didInsertWith details: skillData) {
         self.navigationController?.popViewController(animated: true)
-        self.arraySkill.append(details)
+        SkillManager.sharedInstance.arrayOfSkills.append(details)
         self.tableView.reloadData()
     }
     
     func editSkillController(_ controller: EditSkillViewController, didEditWith details:skillData){
         self.navigationController?.popViewController(animated: true)
-        self.arraySkill[self.skillIndex] = details
+        SkillManager.sharedInstance.arrayOfSkills[self.skillIndex] = details
         self.tableView.reloadData()
     }
 }

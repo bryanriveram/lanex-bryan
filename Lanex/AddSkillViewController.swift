@@ -14,7 +14,6 @@ class AddSkillViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var skillName: UITextField!
     
     var name:String = ""
-    var delegate:SkillDelegate?
     var picker:UIImagePickerController?=UIImagePickerController()
     
     @IBOutlet weak var image: UIImageView!
@@ -36,7 +35,8 @@ class AddSkillViewController: UIViewController, UIImagePickerControllerDelegate,
 
     @IBAction func saveNewSkill(_ sender: Any) {
         let skillDetails = skillData(name: skillName.text, level: 1, img: image.image)
-        delegate?.insertSkillController(self, didInsertWith: skillDetails)
+        SkillManager.sharedInstance.arrayOfSkills.append(skillDetails)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func tappedMe() {

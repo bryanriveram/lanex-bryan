@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lanex/ViewController.swift"
-            timestampString = "528264624.688426"
+            timestampString = "528312721.787449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "ViewController"
-            landmarkType = "4">
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lanex/ViewController.swift"
-            timestampString = "528022042.448692"
+            timestampString = "528312721.787508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>
@@ -41,8 +41,8 @@
                   symbolName = "Lanex.ViewController.__deallocating_deinit"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/ViewController.swift"
-                  timestampString = "528261876.056963"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/ViewController.swift"
+                  timestampString = "528291063.771823"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -53,41 +53,41 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.ViewController"
+                  symbolName = "Lanex.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.ViewController"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/ViewController.swift"
-                  timestampString = "528261876.059419"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Lanex.ViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.ViewController"
-                  moduleName = "Lanex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/ViewController.swift"
-                  timestampString = "528261876.062523"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/ViewController.swift"
+                  timestampString = "528291063.773567"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.ViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.ViewController&gt;"
+                  symbolName = "Lanex.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Lanex.ViewController"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/ViewController.swift"
-                  timestampString = "528261876.065278"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/ViewController.swift"
+                  timestampString = "528291063.775306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lanex.ViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.ViewController&gt;"
+                  moduleName = "Lanex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/ViewController.swift"
+                  timestampString = "528291063.777322"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -98,16 +98,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Lanex.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.ViewController&gt;"
+                  symbolName = "Lanex.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Lanex.ViewController&gt;"
                   moduleName = "Lanex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lanex-bryan/Documents/Lanex/Lanex/ViewController.swift"
-                  timestampString = "528261876.067891"
+                  urlString = "file:///Users/lanex-bryan/Documents/LANEX%20/lanex-bryan/Lanex/ViewController.swift"
+                  timestampString = "528291063.779907"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "34">
+                  offsetFromSymbolStart = "53">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -119,28 +119,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lanex/ViewController.swift"
-            timestampString = "528194670.394716"
+            timestampString = "528312721.787565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lanex/EditSkillViewController.swift"
-            timestampString = "528198705.81504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "saveSkillName(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

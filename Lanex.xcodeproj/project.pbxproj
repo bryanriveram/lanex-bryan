@@ -19,6 +19,7 @@
 		962DEFE91F7283A700D622BC /* LanexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFE81F7283A700D622BC /* LanexUITests.swift */; };
 		962DEFFB1F7399C400D622BC /* EditSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */; };
 		962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */; };
+		96993E791F7D499000D8D7EC /* SkillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96993E781F7D499000D8D7EC /* SkillManager.swift */; };
 		96BD1B191F7B80DA0020B523 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B181F7B80DA0020B523 /* UIViewController+Extension.swift */; };
 		96BD1B1D1F7B93B40020B523 /* SkillCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */; };
 		96BD1B1F1F7B9EE80020B523 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BD1B1E1F7B9EE80020B523 /* SkillView.swift */; };
@@ -68,6 +69,7 @@
 		962DEFEA1F7283A700D622BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962DEFFA1F7399C400D622BC /* EditSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSkillViewController.swift; sourceTree = "<group>"; };
 		962DEFFC1F73FE7F00D622BC /* AddSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSkillViewController.swift; sourceTree = "<group>"; };
+		96993E781F7D499000D8D7EC /* SkillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillManager.swift; sourceTree = "<group>"; };
 		96BD1B181F7B80DA0020B523 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillCanvas.swift; sourceTree = "<group>"; };
 		96BD1B1E1F7B9EE80020B523 /* SkillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		962DEFBC1F7283A700D622BC = {
 			isa = PBXGroup;
 			children = (
+				96993E771F7D497600D8D7EC /* Model */,
 				96BD1B171F7B80780020B523 /* Helper */,
 				962DEFC71F7283A700D622BC /* Lanex */,
 				962DEFDC1F7283A700D622BC /* LanexTests */,
@@ -140,8 +143,8 @@
 				96FAF4BD1F78BB6E00AF922D /* CollectionViewCell.swift */,
 				96BD1B1E1F7B9EE80020B523 /* SkillView.swift */,
 				96BD1B1C1F7B93B40020B523 /* SkillCanvas.swift */,
-				962DEFCC1F7283A700D622BC /* Main.storyboard */,
 				96C6B75E1F74EEDE00148331 /* TableViewCell.swift */,
+				962DEFCC1F7283A700D622BC /* Main.storyboard */,
 				962DEFCF1F7283A700D622BC /* Assets.xcassets */,
 				962DEFD11F7283A700D622BC /* LaunchScreen.storyboard */,
 				962DEFD41F7283A700D622BC /* Info.plist */,
@@ -165,6 +168,14 @@
 				962DEFEA1F7283A700D622BC /* Info.plist */,
 			);
 			path = LanexUITests;
+			sourceTree = "<group>";
+		};
+		96993E771F7D497600D8D7EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96993E781F7D499000D8D7EC /* SkillManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96BD1B171F7B80780020B523 /* Helper */ = {
@@ -500,6 +511,7 @@
 				96BD1B1F1F7B9EE80020B523 /* SkillView.swift in Sources */,
 				962DEFFD1F73FE7F00D622BC /* AddSkillViewController.swift in Sources */,
 				962DEFCB1F7283A700D622BC /* ViewController.swift in Sources */,
+				96993E791F7D499000D8D7EC /* SkillManager.swift in Sources */,
 				962DEFC91F7283A700D622BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

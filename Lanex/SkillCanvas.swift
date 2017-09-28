@@ -10,75 +10,19 @@ import UIKit
 import SnapKit
 
 class SkillCanvas: UIViewController {
-    var skillArray:[skillData]? = nil
     var containers:[UIView]? = []
     var checker:Bool = false
+    let bin: UIImageView = UIImageView(image: UIImage(named: "bin"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        let addbtn = UIButton(frame: .zero)
-//        addbtn.setTitle("Insert New Skill", for: .normal)
-//        addbtn.setTitleColor(UIColor.white, for: .normal)
-//        addbtn.backgroundColor = UIColor.blue
-//        self.view.addSubview(addbtn)
-//        
-//        addbtn.snp.makeConstraints{(make) in
-//            make.bottom.equalTo(self.view.snp.bottom)
-//            make.right.equalTo(self.view.snp.right)
-//            make.left.equalTo(self.view.snp.left)
-//        }
-        
-        
-        // empty storyborad
-        
-        
-        for skill in  skillArray! {
-            self.intersect(skill: skill)
-            
+        self.view.addSubview(bin)
+        bin.snp.makeConstraints{ (make) in
+            make.right.equalTo(self.view.snp.right).offset(-10)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-60)
+            make.width.equalTo(100)
+            make.height.equalTo(110)
         }
-    }
-    
-    func intersect(skill: skillData) {
-        let container = SkillView(width: 130, height: 160, name:skill.name, level:skill.level, image:skill.img)
-        self.view.addSubview(container)
-        let top = CGFloat( Float(arc4random_uniform(500)+50))
-        let left =  CGFloat( Float(arc4random_uniform(300)))
-        container.snp.makeConstraints({ (make) in
-            make.top.equalTo(top)
-            make.left.equalTo(left)
-            make.width.equalTo(130)
-            make.height.equalTo(160)
-        })
-        
-        self.checker = false
-        
-        while !checker {
-            if self.containers?.count == 0 {
-                print("print once")
-                self.checker = true
-            } else {
-                for frame in containers! {
-                    if frame.frame.intersects(container.frame){
-                        let top = CGFloat( Float(arc4random_uniform(500)+50))
-                        let left =  CGFloat( Float(arc4random_uniform(300)))
-                        container.snp.updateConstraints({ (make) in
-                            make.top.equalTo(top)
-                            make.left.equalTo(left)
-                            make.width.equalTo(130)
-                            make.height.equalTo(160)
-                        })
-                        break;
-                    }
-                }
-            }
-            
-            self.checker = true
-        }
-        
-        self.containers?.append(container)
-        self.checker = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,5 +30,50 @@ class SkillCanvas: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        for (index, subview) in (self.view.subviews.filter{$0 is SkillView}).enumerated() {
+            subview.removeFromSuperview()
+        }
+        
+        var tag = 0
+        for skill in  SkillManager.sharedInstance.arrayOfSkills {
+            let container = SkillView(width: 130, height: 160, skill: skill, position: self.view.center)
+            container.tag = tag
+            self.view.addSubview(container)
+            let top = CGFloat( Float(arc4random_uniform(500)+50))
+            let left =  CGFloat( Float(arc4random_uniform(300)))
+            container.snp.makeConstraints({ (make) in
+                make.width.equalTo(130)
+                make.height.equalTo(180)
+                make.top.equalTo(top)
+                make.left.equalTo(left)
+            })
+            container.delegate = self
+            tag += 1
+        }
+    }
+    
+    
+    @IBAction func addNewSkill(_ sender: Any) {
+        let canvas = storyboard?.instantiateViewController(withIdentifier: "AddSkillViewController") as! AddSkillViewController
+        self.navigationController?.pushViewController(canvas, animated: true)
+    }
+}
 
+extension SkillCanvas: skillCanvasDelegate {
+    func intersect(_ canvas: UIView) {
+        let intersect = self.bin.frame.intersects(canvas.frame)
+        if intersect{
+            SkillManager.sharedInstance.arrayOfSkills.remove(at: canvas.tag)
+            canvas.removeFromSuperview()
+        }
+    }
+    
+    func longpress(_ canvas: UIView){
+        let board = storyboard?.instantiateViewController(withIdentifier: "editskill") as! EditSkillViewController
+        board.information = SkillManager.sharedInstance.arrayOfSkills[canvas.tag]
+        board.index = canvas.tag
+        self.navigationController?.pushViewController(board, animated: true)
+    }
 }

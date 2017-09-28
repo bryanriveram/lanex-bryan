@@ -23,6 +23,7 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
     var delegate: SkillDelegate?
     var picker:UIImagePickerController?=UIImagePickerController()
     var row:Int = 0
+    var index:Int = 0
     
     @IBOutlet weak var addSkill: UIButton!
     @IBOutlet weak var image: UIImageView!
@@ -44,11 +45,6 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedMe))
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
-        
-        let closeContainer = UITapGestureRecognizer(target: self, action: #selector(self.closeContainer))
-        
-        cancel.addGestureRecognizer(closeContainer)
-        cancel.isUserInteractionEnabled = true
         
         picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
@@ -88,11 +84,9 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
 
 
     @IBAction func saveSkillName(_ sender: Any) {
-//        delegate?.onSkillReady(skillDetails: skillData(name: skillName.text, level: self.row, img: image.image))
         let updatedSkill = skillData(name: skillName.text, level: self.row, img: image.image)
-        delegate?.editSkillController(self, didEditWith: updatedSkill)
-        
-//        dismiss(animated: true, completion: nil)
+        SkillManager.sharedInstance.arrayOfSkills[self.index] = updatedSkill
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func showPopup(_ sender: Any) {
