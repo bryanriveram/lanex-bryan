@@ -9,18 +9,20 @@
 import UIKit
 
 protocol skillCanvasDelegate: class {
-    func intersect(_ canvas: UIView)
-    func longpress(_ canvas: UIView)
+    func intersect(_ canvas: SkillView)
+    func longpress(_ canvas: SkillView)
 }
 
 class SkillView: UIView {
     
     
     weak var delegate:skillCanvasDelegate?
+    var skillData: skillData?
     
     convenience init(width: CGFloat, height: CGFloat, skill: skillData, position: CGPoint) {
-        
+    
         self.init(frame: .zero)
+        self.skillData = skill
         self.frame.size.width = width
         self.frame.size.height = height
         self.backgroundColor = UIColor.white
@@ -33,8 +35,8 @@ class SkillView: UIView {
         
         img.snp.makeConstraints({ (make) in
             make.top.equalTo(self.snp.top).offset(5)
-            make.width.equalTo(100)
-            make.height.equalTo(100)
+            make.width.equalTo(self.snp.width).multipliedBy(0.9)
+            make.height.equalTo(snp.width).multipliedBy(0.9)
             make.centerX.equalTo(self.snp.centerX)
         })
         
@@ -43,7 +45,7 @@ class SkillView: UIView {
         self.addSubview(skillName)
         
         skillName.snp.makeConstraints({ (make) in
-            make.top.equalTo(self.snp.top).offset(110)
+            make.top.equalTo(img.snp.bottom)
             make.left.equalTo(self.snp.left).offset(10)
         })
         
@@ -52,7 +54,7 @@ class SkillView: UIView {
         self.addSubview(skillLevel)
         
         skillLevel.snp.makeConstraints({ (make) in
-            make.top.equalTo(self.snp.top).offset(130)
+            make.top.equalTo(skillName.snp.bottom)
             make.left.equalTo(self.snp.left).offset(10)
         })
         
@@ -72,8 +74,8 @@ class SkillView: UIView {
         case .changed:
             
             self.snp.remakeConstraints({ (make) in
-                make.size.width.equalTo(130)
-                make.size.height.equalTo(180)
+                make.width.equalTo(130)
+                make.height.equalTo(180)
                 make.centerX.equalTo(pointOfTouch.x)
                 make.centerY.equalTo(pointOfTouch.y)
             })

@@ -7,33 +7,36 @@
 //
 
 import UIKit
+import AnimatedCollectionViewLayout
 
 class CollectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
-    var gallery:[String] = ["1", "2", "3", "4", "5"]
 
     @IBOutlet weak var close: UILabel!
     var picker:UIImagePickerController?=UIImagePickerController()
+    var skill:skillData?
+    var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     override func viewDidLoad() {
-        print("gallery")
         super.viewDidLoad()
-        let itemSize = UIScreen.main.bounds.width/3 - 3
         
-        let layout = UICollectionViewFlowLayout();
-        layout.sectionInset = UIEdgeInsetsMake(20, 0, 10, 0)
-        layout.itemSize = CGSize(width: itemSize, height: itemSize)
-        layout.minimumInteritemSpacing = 3
-        layout.minimumLineSpacing = 3
+        myCollectionView.isPagingEnabled = true
         
+        let layout = AnimatedCollectionViewLayout()
+        layout.scrollDirection = .horizontal
+        layout.animator = animator?.0
+//        if let layout =  myCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+//            print("here")
+//            layout.scrollDirection = .horizontal
+//            layout.animator = animator?.0
+//        }
         
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(closeContainer))
-//        close.addGestureRecognizer(tap);
-//        close.isUserInteractionEnabled = true
-//        myCollectionView.collectionViewLayout = layout
-//        
-//        picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate 
-        // Do any additional setup after loading the view.
+        myCollectionView.collectionViewLayout = layout
+        picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+    }
+    
+    func setSkill(skill: skillData){
+        self.skill = skill
     }
     
     func closeContainer() {
@@ -60,20 +63,25 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 
 extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gallery.count
+        return SkillManager.sharedInstance.arrayOfNotes.filter{$0.id==self.skill?.id}.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath as IndexPath) as! CollectionViewCell
-        cell.cellImage.image = UIImage(named: gallery[indexPath.row])!
-        
+        cell.textarea.text = SkillManager.sharedInstance.arrayOfNotes.filter{$0.id==self.skill?.id}[indexPath.row].note
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.clipsToBounds = animator?.1 ?? true
         return cell
     }
     
@@ -82,5 +90,24 @@ extension CollectionViewController: UICollectionViewDataSource {
 extension CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+    }
+}
+
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let animator = animator else { return self.myCollectionView.bounds.size }
+        return CGSize(width: self.myCollectionView.bounds.width - 10 / CGFloat(animator.2), height: self.myCollectionView.bounds.height - 10 / CGFloat(animator.3))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

@@ -19,5 +19,7 @@ target 'Lanex' do
 
   # Pods for AnimationTest
   pod 'SnapKit', '~> 3.0.0'
+  pod 'FAPaginationLayout'
+  pod 'AnimatedCollectionViewLayout'
 
 end

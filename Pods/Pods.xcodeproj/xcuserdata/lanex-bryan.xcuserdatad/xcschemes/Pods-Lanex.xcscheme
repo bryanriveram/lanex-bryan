@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CF5F0913EC6213967E642659905DE96A"
+               BlueprintIdentifier = "74CBFBA6A8DC05AAFF54BF3B9FF6184B"
                BuildableName = "Pods_Lanex.framework"
                BlueprintName = "Pods-Lanex"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CF5F0913EC6213967E642659905DE96A"
+            BlueprintIdentifier = "74CBFBA6A8DC05AAFF54BF3B9FF6184B"
             BuildableName = "Pods_Lanex.framework"
             BlueprintName = "Pods-Lanex"
             ReferencedContainer = "container:Pods.xcodeproj">

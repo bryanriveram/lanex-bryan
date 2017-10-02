@@ -34,7 +34,7 @@ class AddSkillViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func saveNewSkill(_ sender: Any) {
-        let skillDetails = skillData(name: skillName.text, level: 1, img: image.image)
+        let skillDetails = skillData(id: SkillManager.sharedInstance.arrayOfSkills.count + 1, name: skillName.text, level: 1, img: image.image)
         SkillManager.sharedInstance.arrayOfSkills.append(skillDetails)
         self.navigationController?.popViewController(animated: true)
     }

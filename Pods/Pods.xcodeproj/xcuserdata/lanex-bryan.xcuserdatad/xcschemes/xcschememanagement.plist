@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AnimatedCollectionViewLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FAPaginationLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Lanex.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -26,27 +36,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>3A3E8879FE07D96079C17D047153F57F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>80B66080FFFF6CE6816EF22225F252AB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8B25ED9A3FCE87F258BE02B9BDF9E6F9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF5F0913EC6213967E642659905DE96A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
