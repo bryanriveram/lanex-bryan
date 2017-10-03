@@ -89,7 +89,13 @@ class EditSkillViewController: UIViewController, UIImagePickerControllerDelegate
             return false
         }
         
+        if self.level == 0 {
+            self.level = (information?.level)!
+        }
+        
         let updatedSkill = skillData(id: (information?.id)!, name: skillName.text, level: self.level, img: image.image)
+        
+        print(updatedSkill)
         SkillManager.sharedInstance.arrayOfSkills[index!] = updatedSkill
         self.navigationController?.popViewController(animated: true)
     }

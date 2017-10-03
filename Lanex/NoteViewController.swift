@@ -19,10 +19,20 @@ class NoteViewController: UIViewController {
     
     @IBOutlet weak var note: UITextField!
     var delegate: NoteDelegate?
+    @IBOutlet weak var insetview: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        uiview.layer.cornerRadius = 10
+        
+        uiview.layer.shadowOpacity = 0.7
+        uiview.layer.shadowOffset = CGSize(width: 3, height: 3)
+        uiview.layer.shadowRadius = 10
+        uiview.layer.shadowColor = UIColor.darkGray.cgColor
+        
+        insetview.layer.masksToBounds = true
+        insetview.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
+//        note.layer.borderWidth = 1
+//        note.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,4 +50,7 @@ class NoteViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

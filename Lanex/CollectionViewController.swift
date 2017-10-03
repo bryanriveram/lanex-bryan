@@ -8,6 +8,7 @@
 
 import UIKit
 import AnimatedCollectionViewLayout
+import SnapKit
 
 class CollectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -25,18 +26,42 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
         let layout = AnimatedCollectionViewLayout()
         layout.scrollDirection = .horizontal
         layout.animator = PageAttributesAnimator(scaleRate: 0.8)
+//        layout.animator = LinearCardAttributesAnimator(minAlpha: 0.6, itemSpacing: 10, scaleRate: 10)
         
         myCollectionView.collectionViewLayout = layout
         picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
-        let swipe = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeDown))
+        let swipe = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeDown(_:)))
         swipe.direction = .down
         myCollectionView.addGestureRecognizer(swipe)
         myCollectionView.isUserInteractionEnabled = true
     }
     
-    func swipeDown(){
-        self.dismiss(animated: true, completion: nil)
+    func swipeDown(_ gesture: UISwipeGestureRecognizer){
+        
+//        let pointOfTouch = gesture.location(in: myCollectionView)
+//
+//        switch gesture.state {
+//        case .began:
+//            break
+//        case .changed:
+//
+//            myCollectionView.snp.remakeConstraints({ (make) in
+//                make.width.equalTo(myCollectionView.collectionViewLayout.collectionViewContentSize.width)
+//                make.height.equalTo(myCollectionView.collectionViewLayout.collectionViewContentSize.height)
+//                make.centerX.equalTo(self.view.center)
+//                make.centerY.equalTo(pointOfTouch.y)
+//            })
+//
+//            myCollectionView.setNeedsLayout()
+//            myCollectionView.layoutIfNeeded()
+//            break
+//        case .ended:
+//            self.dismiss(animated: true, completion: nil)
+//        default:
+//            break
+//        }
+            self.dismiss(animated: true, completion: nil)
     }
     
     func setSkill(skill: skillData){
@@ -79,7 +104,12 @@ extension CollectionViewController: UICollectionViewDataSource {
         
         let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath as IndexPath) as! CollectionViewCell
         cell.textarea.text = SkillManager.sharedInstance.arrayOfNotes.filter{$0.id==self.skill?.id}[indexPath.row].note
-        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 10
+        cell.layer.shadowRadius = 10
+        cell.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.layer.shadowOpacity = 0.6
+        cell.layer.shadowOffset = CGSize(width: 3, height: 3)
+        cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.clipsToBounds = animator?.1 ?? true
         return cell
@@ -96,7 +126,7 @@ extension CollectionViewController: UICollectionViewDelegate {
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let animator = animator else { return self.myCollectionView.bounds.size }
-        return CGSize(width: self.myCollectionView.bounds.width - 10 / CGFloat(animator.2), height: self.myCollectionView.bounds.height - 10 / CGFloat(animator.3))
+        return CGSize(width: self.myCollectionView.bounds.width - 20 / CGFloat(animator.2), height: self.myCollectionView.bounds.height - 20 / CGFloat(animator.3))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
