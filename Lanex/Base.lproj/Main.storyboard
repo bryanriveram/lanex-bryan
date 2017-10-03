@@ -415,23 +415,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GH-co-pdU">
-                                <rect key="frame" x="157" y="599" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="ZdD-WW-nWr"/>
-                                    <constraint firstAttribute="height" constant="30" id="ufS-xa-JUD"/>
-                                </constraints>
-                                <state key="normal" title="CLOSE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="DBK-ce-Bvf" eventType="touchUpInside" id="xTd-Cu-CSl"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-J0-Ptf">
                                 <rect key="frame" x="72" y="152" width="271" height="433"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="433" id="9tf-7C-sud"/>
                                     <constraint firstAttribute="width" constant="271" id="nab-If-BEV"/>
@@ -459,7 +445,7 @@
                                                 </textView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="qCe-cd-0v0" secondAttribute="bottom" id="BFr-28-cQf"/>
                                             <constraint firstItem="qCe-cd-0v0" firstAttribute="top" secondItem="gFX-zV-iYd" secondAttribute="top" id="gFQ-Xi-djy"/>
@@ -479,14 +465,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.75318386130136983" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0GH-co-pdU" firstAttribute="centerX" secondItem="axg-Ve-eEi" secondAttribute="centerX" id="2fB-PR-OT5"/>
                             <constraint firstItem="Mfj-J0-Ptf" firstAttribute="centerX" secondItem="axg-Ve-eEi" secondAttribute="centerX" id="YNx-lN-iac"/>
-                            <constraint firstItem="0GH-co-pdU" firstAttribute="top" secondItem="Mfj-J0-Ptf" secondAttribute="bottom" constant="14" id="ae4-Hu-Ojg"/>
                             <constraint firstItem="Mfj-J0-Ptf" firstAttribute="centerY" secondItem="axg-Ve-eEi" secondAttribute="centerY" id="kAZ-Rz-SP4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myCollectionView" destination="Mfj-J0-Ptf" id="z1K-1y-lnA"/>
+                        <outlet property="myCollectionView" destination="Mfj-J0-Ptf" id="gYv-RL-X97"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfe-eo-rYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -518,6 +502,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7p-eb-tsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525" y="993"/>
+        </scene>
+        <!--Notes Collection View Controller-->
+        <scene sceneID="wJ9-vQ-RZI">
+            <objects>
+                <collectionViewController storyboardIdentifier="NotesCollectionViewController" id="i2u-Qg-XTs" customClass="NotesCollectionViewController" customModule="Lanex" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5br-HH-dFM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xiZ-iX-vTj">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="myCell" reuseIdentifier="myCell" id="P80-2x-25Y" customClass="CollectionViewCell" customModule="Lanex" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bd2-MS-G80">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Bd2-MS-G80" firstAttribute="top" secondItem="P80-2x-25Y" secondAttribute="top" id="2vH-MC-TIm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bd2-MS-G80" secondAttribute="bottom" id="7r0-hz-wDF"/>
+                                    <constraint firstItem="Bd2-MS-G80" firstAttribute="leading" secondItem="P80-2x-25Y" secondAttribute="leading" id="Pz5-CJ-Bvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bd2-MS-G80" secondAttribute="trailing" id="w6o-as-8sj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textarea" destination="Bd2-MS-G80" id="XWQ-HS-rwP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="i2u-Qg-XTs" id="FUD-gR-9Yj"/>
+                            <outlet property="delegate" destination="i2u-Qg-XTs" id="Wam-z2-3pl"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBA-MU-Gi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266.666666666667" y="995.38043478260875"/>
         </scene>
         <!--Skill Level View Controller-->
         <scene sceneID="UsW-L3-bYr">

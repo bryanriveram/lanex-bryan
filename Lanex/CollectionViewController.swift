@@ -24,23 +24,23 @@ class CollectionViewController: UIViewController, UIImagePickerControllerDelegat
         
         let layout = AnimatedCollectionViewLayout()
         layout.scrollDirection = .horizontal
-        layout.animator = animator?.0
-//        if let layout =  myCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-//            print("here")
-//            layout.scrollDirection = .horizontal
-//            layout.animator = animator?.0
-//        }
+        layout.animator = PageAttributesAnimator(scaleRate: 0.8)
         
         myCollectionView.collectionViewLayout = layout
         picker?.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+        let swipe = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeDown))
+        swipe.direction = .down
+        myCollectionView.addGestureRecognizer(swipe)
+        myCollectionView.isUserInteractionEnabled = true
+    }
+    
+    func swipeDown(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setSkill(skill: skillData){
         self.skill = skill
-    }
-    
-    func closeContainer() {
-        self.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

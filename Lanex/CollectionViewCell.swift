@@ -13,4 +13,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var textarea: UITextView!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
